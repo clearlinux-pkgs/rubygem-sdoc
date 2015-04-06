@@ -1,0 +1,55 @@
+From 80c840c7d281efc166b5ba6a1502d24e6281cf47 Mon Sep 17 00:00:00 2001
+From: Athenas Jimenez <athenas.jimenez.gonzalez@intel.com>
+Date: Fri, 31 Jul 2015 22:16:32 +0000
+Subject: [PATCH] Fix minitest version
+
+Signed-off-by: Athenas Jimenez <athenas.jimenez.gonzalez@intel.com>
+---
+ rubygem-sdoc.gemspec | 6 +++---
+ sdoc.gemspec         | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/rubygem-sdoc.gemspec b/rubygem-sdoc.gemspec
+index 97d5b44..a65d756 100644
+--- a/rubygem-sdoc.gemspec
++++ b/rubygem-sdoc.gemspec
+@@ -29,20 +29,20 @@ Gem::Specification.new do |s|
+       s.add_runtime_dependency(%q<json>, [">= 1.7.7", "~> 1.7"])
+       s.add_development_dependency(%q<bundler>, ["~> 1.3"])
+       s.add_development_dependency(%q<rake>, [">= 0"])
+-      s.add_development_dependency(%q<minitest>, ["~> 4.0"])
++      s.add_development_dependency(%q<minitest>, [">= 4.0"])
+     else
+       s.add_dependency(%q<rdoc>, ["~> 4.0"])
+       s.add_dependency(%q<json>, [">= 1.7.7", "~> 1.7"])
+       s.add_dependency(%q<bundler>, ["~> 1.3"])
+       s.add_dependency(%q<rake>, [">= 0"])
+-      s.add_dependency(%q<minitest>, ["~> 4.0"])
++      s.add_dependency(%q<minitest>, [">= 4.0"])
+     end
+   else
+     s.add_dependency(%q<rdoc>, ["~> 4.0"])
+     s.add_dependency(%q<json>, [">= 1.7.7", "~> 1.7"])
+     s.add_dependency(%q<bundler>, ["~> 1.3"])
+     s.add_dependency(%q<rake>, [">= 0"])
+-    s.add_dependency(%q<minitest>, ["~> 4.0"])
++    s.add_dependency(%q<minitest>, [">= 4.0"])
+   end
+ end
+ 
+diff --git a/sdoc.gemspec b/sdoc.gemspec
+index e63deab..2af62cb 100644
+--- a/sdoc.gemspec
++++ b/sdoc.gemspec
+@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
+ 
+   s.add_development_dependency "bundler", "~> 1.3"
+   s.add_development_dependency "rake"
+-  s.add_development_dependency "minitest", "~> 4.0"
++  s.add_development_dependency "minitest", ">= 4.0"
+ 
+   s.files         = `git ls-files`.split("\n")
+   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+-- 
+2.4.2
+
